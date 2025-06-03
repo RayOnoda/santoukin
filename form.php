@@ -16,5 +16,6 @@
 
     </form>
     <p><a href="view.php">▶ 投稿一覧を見る</a></p>
+    <p><a href="posts/logout.php">ログアウト</a></p>
 </body>
 </html>
