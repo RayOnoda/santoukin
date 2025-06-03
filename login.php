@@ -23,6 +23,7 @@
             <form class="login-form-new" action="tina10-2create.php" method="post">
                 <input class="button" type="submit" value="アカウント新規作成">
             </form>
+            <!-- test -->
         </div>
 </body>
 </html>
