@@ -16,6 +16,7 @@
                 <input class="text" type="password" name="password" value="0000"><br><br>
                 <input class="button" type="submit" value="ログイン">
             </form>
+            <!-- test -->
         </div>
 </body>
 </html>
