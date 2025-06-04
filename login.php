@@ -1,11 +1,3 @@
-<?php
-session_start();
-if (isset($_SESSION['user_id'])) {
-    header("Location: form.php");
-    exit;
-}
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,9 +11,9 @@ if (isset($_SESSION['user_id'])) {
         <div class="login-form">
         <form action="check.php" method="post">
                 <p>メールアドレス</p>
-                <input class="text" type="text" name="username" placeholder="  Email">
+                <input class="text" type="text" name="username" value="santoukin">
                 <p>パスワード</p>
-                <input class="text" type="password" name="password" placeholder="  Password"><br><br>
+                <input class="text" type="password" name="password" value="0000"><br><br>
                 <input class="button" type="submit" value="ログイン">
             </form>
         </div>

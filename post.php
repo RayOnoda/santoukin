@@ -8,8 +8,5 @@ if (trim($comment) === '') {
     exit;
 }
 
-$entry = "$time\t$name\t$comment\n";
-file_put_contents('comments.txt', $entry, FILE_APPEND);
-header("Location: view.php");
-exit;
+
 ?>
