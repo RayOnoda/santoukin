@@ -14,7 +14,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     if ($user && $password === $user['password']) {
         $_SESSION['user_id'] = $user['id'];
         $_SESSION['username'] = $user['username'];
-        header("Location: ../view.php");
+        header("Location: view.php");
         exit;
     } else {
         echo "ログインに失敗しました。<a href='form.php'>戻る</a>";
