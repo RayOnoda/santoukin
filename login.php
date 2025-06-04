@@ -1,16 +1,22 @@
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>ログイン</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
 </head>
 <body>
-    <h1>ログイン</h1>
-    <form action="check.php" method="post">
-        ユーザー名: <input type="text" name="username" required><br>
-        パスワード: <input type="password" name="password" required><br>
-        <input type="submit" value="ログイン">
-    </form>
+    <div class="login-1">
+        <h1>ログイン</h1>
+        <div class="login-form">
+        <form action="check.php" method="post">
+                <p>メールアドレス</p>
+                <input class="text" type="text" name="username" value="santoukin">
+                <p>パスワード</p>
+                <input class="text" type="password" name="password" value="0000"><br><br>
+                <input class="button" type="submit" value="ログイン">
+            </form>
+        </div>
 </body>
 </html>

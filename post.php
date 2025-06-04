@@ -19,3 +19,4 @@ $stmt->execute([$_SESSION['username'], $comment, $time]);
 header("Location: view.php");
 exit;
 ?>
+
