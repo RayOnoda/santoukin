@@ -1,3 +1,11 @@
+<?php
+session_start();
+if (isset($_SESSION['user_id'])) {
+    header("Location: form.php");
+    exit;
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,19 +17,12 @@
     <div class="login-1">
         <h1>ログイン</h1>
         <div class="login-form">
-            <form class="login-form-in" action="tina10-2loginposts_in.php" method="post">
+        <form action="check.php" method="post">
                 <p>メールアドレス</p>
-                <input class="text" type="email" name="mail" placeholder="  Email">
+                <input class="text" type="text" name="username" placeholder="  Email">
                 <p>パスワード</p>
                 <input class="text" type="password" name="password" placeholder="  Password"><br><br>
-
-                <input class="button" type="submit" value="ログイン"><br><br>
-            </form>
-            <form class="login-form-out" action="tina10-2_logout.php">
-                <input class="button" type="submit" value="ログアウト">
-            </form>
-            <form class="login-form-new" action="tina10-2create.php" method="post">
-                <input class="button" type="submit" value="アカウント新規作成">
+                <input class="button" type="submit" value="ログイン">
             </form>
         </div>
 </body>
