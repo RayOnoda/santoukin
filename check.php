@@ -9,8 +9,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $stmt = $pdo->prepare("SELECT * FROM user WHERE username = ?");
     $stmt->execute([$username]);
     $user = $stmt->fetch();
-
-    // 平文のパスワードを直接比較
+    
     if ($user && $password === $user['password']) {
         $_SESSION['user_id'] = $user['id'];
         $_SESSION['username'] = $user['username'];

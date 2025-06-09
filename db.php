@@ -2,7 +2,7 @@
 $host = 'localhost';          
 $dbname = 'santoukin';     
 $user = 'root';    
-$password = ''; // ←DBのパスワード（XAMPPなら空文字""のことが多い）
+$password = 'root';
 $charset = 'utf8mb4';
 
 $dsn = "mysql:host=$host;dbname=$dbname;charset=$charset";
