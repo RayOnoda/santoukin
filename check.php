@@ -17,6 +17,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         header("Location: form.php");
         exit;
     } else {
-        echo "ログインに失敗しました。<a href='form.php'>戻る</a>";
+        echo "ログインに失敗しました。<a href='login.php'>戻る</a>";
     }
 }
