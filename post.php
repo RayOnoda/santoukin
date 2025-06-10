@@ -10,6 +10,7 @@ $user_id = $_SESSION['user_id'];
 
 $name = htmlspecialchars($_POST['name'] ?? '名無し');
 $comment = htmlspecialchars($_POST['comment'] ?? '');
+date_default_timezone_set('Asia/Tokyo');
 $time = date('Y-m-d H:i:s');
 
 if (trim($comment) === '') {
