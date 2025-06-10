@@ -19,6 +19,7 @@ if (trim($comment) === '') {
 }
 $user_id = $_SESSION['user_id'];
 
+
 $stmt = $pdo->prepare("INSERT INTO comment (user_id, content, created_at) VALUES (?,?,?)");
 $stmt->execute([$user_id, $comment, $time]);
 
