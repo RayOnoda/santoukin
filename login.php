@@ -11,6 +11,7 @@
         <h1>ログイン</h1>
         <div class="login-form">
         <form action="check.php" method="post">
+            
                 <p>ユーザ名</p>
                 <input class="text" type="text" name="username" value="santoukin">
                 <p>パスワード</p>
