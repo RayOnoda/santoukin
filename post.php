@@ -2,6 +2,12 @@
 session_start();
 require_once "db.php";
 
+if (!isset($_SESSION['user_id'])){
+    exit('ログインしていません。');
+}
+
+$user_id = $_SESSION['user_id'];
+
 $name = htmlspecialchars($_POST['name'] ?? '名無し');
 $comment = htmlspecialchars($_POST['comment'] ?? '');
 date_default_timezone_set('Asia/Tokyo');
@@ -21,4 +27,3 @@ $stmt->execute([$user_id, $comment, $time]);
 header("Location: view.php");
 exit;
 ?>
-
