@@ -1,6 +1,7 @@
 <?php
 require_once "db.php";
 
+$pdo = connectDB_local();
 $stmt = $pdo->query( "SELECT comment.content, comment.created_at, user.username
 FROM comment
 JOIN user ON comment.user_id = user.id

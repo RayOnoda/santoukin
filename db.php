@@ -1,19 +1,28 @@
 <?php
-$host = 'localhost';          
-$dbname = 'santoukin';     
-$user = 'root';    
-$password = 'root'; // ←DBのパスワード（XAMPPなら空文字""のことが多い）
-$charset = 'utf8mb4';
+    function connectDb_public(){
+        try{
+            $dsn = '';
+            $username = '';
+            $password = '';
+            $pdo = new PDO($dsn, $username, $password);
+            return $pdo;
+        }catch(PDOException $e){
+            echo 'データベース接続に失敗しました。';
+            exit;
+        }
+    }
 
-$dsn = "mysql:host=$host;dbname=$dbname;charset=$charset";
-$options = [
-    PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
-    PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
-];
 
-try {
-    $pdo = new PDO($dsn, $user, $password, $options);
-} catch (PDOException $e) {
-    exit('データベース接続失敗: ' . $e->getMessage());
-}
-
+    function connectDB_local(){
+        try{
+            $dsn = 'mysql:host=localhost;dbname=santoukin;charset=utf8';
+            $username = 'root';
+            $password = "root";
+            $pdo = new PDO($dsn, $username, $password);
+            return $pdo;
+        }catch(PDOException $e){
+            echo 'データベース接続に失敗しました。';
+            exit;
+        }
+    }
+?>
